@@ -11,7 +11,7 @@ body {
   min-height: 100dvh;
   display: grid;
   /* grid-template-columns: auto 1fr 1fr 1fr; */
-  grid-template-columns: auto repeat(3,1fr);
+  grid-template-columns: auto repeat(3, 1fr);
   grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
   /* grid-template-rows: auto repeat(5,1fr); */
   grid-template-areas:
@@ -26,7 +26,32 @@ body {
 
 header {
   grid-area: header;
-  background: green;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.logo {
+  font-size: large;
+  font-style: italic;
+  font-weight: 900;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 6px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: x-small;
+  text-transform: uppercase;
 }
 
 aside {
