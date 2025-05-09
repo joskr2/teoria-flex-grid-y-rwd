@@ -7,12 +7,14 @@
 
 body {
   background: black;
-  color:white;
+  color: white;
   min-height: 100dvh;
   display: grid;
-  grid-template-columns: repeat(1fr,4);
-  grid-template-rows: repeat(1fr,6);
-  grid-template-areas: 
+  /* grid-template-columns: auto 1fr 1fr 1fr; */
+  grid-template-columns: auto repeat(3,1fr);
+  grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: auto repeat(5,1fr); */
+  grid-template-areas:
     "h h h h"
     "a m m m"
     "a m m m"
@@ -22,20 +24,22 @@ body {
   ;
 }
 
-header{
+header {
   grid-area: h;
   background: green;
 }
-aside{
+
+aside {
   grid-area: a;
   background: tomato;
 }
-main{
+
+main {
   grid-area: m;
   background: yellow;
 }
-footer{
+
+footer {
   grid-area: f;
   background: blue;
 }
-
