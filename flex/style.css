@@ -1,0 +1,121 @@
+  /* el eje principal ->es la direccion en la que estan mis items o elementos,
+  ojo puede ser horizontal o vertical el eje cruzado ->es el eje contrario -->< !-- display:flex -->< !-- si queremos definir la direccion en la que ira el contenedor flex flex-direction: row ->filas flx-direction : column ->column */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  body {
+    border: 10px solid rgb(255, 0, 149);
+    background: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    gap: 12px;
+    padding: 24px;
+    justify-content: space-evenly;
+  }
+
+  h1 {
+    color: white;
+    margin: 12px;
+  }
+
+  p {
+    border: 1px solid blue;
+    color: white;
+    padding: 12px;
+    margin: 24px;
+    max-width: fit-content;
+    /* max width es el ancho maximo  que puede tner ese elmento , y en este caso al usar fit-content(tamaño del contenido del elemento) */
+  }
+
+  .section1 {
+    border: 15px dashed rgb(255, 255, 255);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 24px;
+  }
+
+  .contenedor1 {
+    display: flex;
+    gap: 32px;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* flex-wrap: wrap; */
+    /* el elemento pasa a la siguiente linea si ya no tengo espacio disponible en la linea actual */
+    border: 10px solid yellow;
+    /* flex-basis: 100px; */
+  }
+
+  .contenedor2 {
+    display: flex;
+    gap: 24px;
+    border: 10px solid rgb(0, 170, 255);
+    align-self: flex-end;
+    min-width: 300px;
+    /* min width significa que el elemento no podra ser mas pequeño que esa medida(300px) */
+    /* flex-direction: column;
+    flex-wrap: nowrap; */
+    flex-flow: column nowrap
+      /* flex flow es equivalente a escrbir flex direction y flex-wrap por separado */
+  }
+
+  .section2 {
+    border: 3px dotted rgb(26, 255, 0);
+    padding: 12px;
+    display: flex;
+    /* flex-direction: row; */
+    gap: 24px;
+    /* flex-wrap: wrap; */
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .contenedor3 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    border: 3px solid red;
+    /* flex-basis: 100px; */
+  }
+
+  .contenedor4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 3px solid red;
+    /* flex-basis: 100px; */
+  }
+
+  /* video {
+    width: 200px;
+    height: 200px;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+  } */
+
+  #section1-contenedor1-texto,
+  #section2-contenedor3-texto {
+    flex-basis: 200px;
+    font-size: 1rem;
+    /* rem -> relativo al taman de letra del html 
+    em -> relativo al tamaño de letra de su padre inmediato */
+    background: goldenrod;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    /* alineacion del texto : centarda */
+    /* justify-content: center; */
+    /* no lo puedo aplicar aca porque solo se aplica a los elmentos padre, o sea a elementos que tiene a otros lementos */
+  }

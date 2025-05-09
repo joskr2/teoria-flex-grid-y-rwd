@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body {
+  background: black;
+}
+
+.contenedor{
+  display: grid;
+  /* grid es un display bidireccional donde trabajamos tantos las filas como las columnas , vertical y horizontal */
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid template columns, me sirve para definir el numero de columnas que quiero en mi grilla */
+  /* fr -> fraccion de la pantalla, y va a ser proporcioanl en relacion al numeron de fracciones que tenga  */
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  /* aca en grid-template-rows defino kas filas de la grid */
+  background: slategray;  
+}
+
+.elemento {
+  color: white;
+  border: 1px solid;
+  padding: 5px;
+	}
