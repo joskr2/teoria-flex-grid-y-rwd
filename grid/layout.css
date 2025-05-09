@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body {
+  background: black;
+  color:white;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: repeat(1fr,4);
+  grid-template-rows: repeat(1fr,6);
+  grid-template-areas: 
+    "h h h h"
+    "a m m m"
+    "a m m m"
+    "a m m m"
+    "a m m m"
+    "f f f f"
+  ;
+}
+
+header{
+  grid-area: h;
+  background: green;
+}
+aside{
+  grid-area: a;
+  background: tomato;
+}
+main{
+  grid-area: m;
+  background: yellow;
+}
+footer{
+  grid-area: f;
+  background: blue;
+}
+
