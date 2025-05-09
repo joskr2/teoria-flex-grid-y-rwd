@@ -15,31 +15,31 @@ body {
   grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
   /* grid-template-rows: auto repeat(5,1fr); */
   grid-template-areas:
-    "h h h h"
-    "a m m m"
-    "a m m m"
-    "a m m m"
-    "a m m m"
-    "f f f f"
+    "header header header header"
+    "aside main main main"
+    "aside main main main"
+    "aside main main main"
+    "aside main main main"
+    "footer footer footer footer"
   ;
 }
 
 header {
-  grid-area: h;
+  grid-area: header;
   background: green;
 }
 
 aside {
-  grid-area: a;
+  grid-area: aside;
   background: tomato;
 }
 
 main {
-  grid-area: m;
+  grid-area: main;
   background: yellow;
 }
 
 footer {
-  grid-area: f;
+  grid-area: footer;
   background: blue;
 }
