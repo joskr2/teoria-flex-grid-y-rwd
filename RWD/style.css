@@ -150,12 +150,27 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+
+  body {
+    grid-template-columns: auto 1fr 1fr 1fr;
+    grid-template-columns: auto repeat(3, 1fr);
+    grid-template-areas:
+      "header header header header"
+      "aside main main main"
+      "aside main main main"
+      "aside main main main"
+      "aside main main main"
+      "footer footer footer footer"
+    ;
+  }
+
+
   ul {
     display: flex;
   }
 
   #menu-responsivo {
-    display:none;
+    display: none;
     /* display none -> no ocupa ningun espacio, entonces nunca se muestra en patalla */
 
 
