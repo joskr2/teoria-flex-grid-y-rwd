@@ -24,7 +24,19 @@
   ...
 } */
 
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* .roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -36,6 +48,20 @@ body {
   color: white;
   min-height: 100dvh;
   display: grid;
+
+  font-family: "Roboto",
+  sans-serif;
+  /* font family es el tipo de letra(la fammilia) */
+
+  font-optical-sizing: auto;
+  font-weight: 400;
+  /* font weight es el grosor de la letra */
+
+  /* font style es estilo de la letra como cursiva por ejemplo */
+  font-style: italic;
+  font-variation-settings:
+    "wdth" 100;
+
   /* grid-template-columns: auto 1fr 1fr 1fr; */
   /* grid-template-columns: auto repeat(3, 1fr);
   grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr; */
@@ -53,7 +79,7 @@ body {
   grid-template-rows: auto 2fr 1fr auto;
 
 
-  grid-template-areas: 
+  grid-template-areas:
     "header"
     "main"
     "aside"
@@ -71,15 +97,10 @@ nav {
   padding: 12px;
 }
 
-.logo {
-  font-size: large;
-  font-style: italic;
-  font-weight: 900;
-}
-
 ul {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 6px;
 }
 
