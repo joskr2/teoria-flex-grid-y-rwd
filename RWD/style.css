@@ -85,6 +85,7 @@ body {
     "aside"
     "footer"
   ;
+  /* place-content: center; */
 }
 
 header {
@@ -100,7 +101,11 @@ nav {
 ul {
   list-style: none;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* main axis -> (eje principal)  */
   align-items: center;
+  /* para centrar elementos en el eje secundario usare align items */
   gap: 6px;
 }
 
@@ -119,6 +124,14 @@ aside {
 main {
   grid-area: main;
   background: yellow;
+  display: flex;
+  flex-direction: column;
+
+  /* debemos sabe enq ue direccion estan nuestros elementos , vertical u horizontal , dependiendo de eso , tendre mi eje principal y mi eje secundario */
+
+  /* eje principal(main axis) -> eje y , vertical  */
+
+  /* eje secundario cross axis -> eje x , horizontal */
 }
 
 footer {
