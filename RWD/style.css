@@ -50,7 +50,7 @@ body {
   display: grid;
 
   font-family: "Roboto",
-  sans-serif;
+    sans-serif;
   /* font family es el tipo de letra(la fammilia) */
 
   font-optical-sizing: auto;
@@ -107,6 +107,7 @@ ul {
   align-items: center;
   /* para centrar elementos en el eje secundario usare align items */
   gap: 6px;
+  display: none;
 }
 
 a {
@@ -137,4 +138,24 @@ main {
 footer {
   grid-area: footer;
   background: blue;
+}
+
+
+#menu-responsivo {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  ul {
+    display: flex;
+  }
+
+  #menu-responsivo {
+    display:none;
+    /* display none -> no ocupa ningun espacio, entonces nunca se muestra en patalla */
+
+    
+    /* visibility: hidden; */
+    /* visibilidad es no es visible , pero si ocupa espacio */
+  }
 }
