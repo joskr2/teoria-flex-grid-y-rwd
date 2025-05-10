@@ -1,30 +1,34 @@
 /* Dispositivos muy pequeños (celulares, 600px para abajo) */
-
+/* si el ancho del dispositivo que uso mide hasta 600px , se aplica lo que hay dentro del media query */
 /* @media only screen and (max-width: 600px) {
   ...
 } */
-
+/* ---------------------------------------------------------------------------- */
 /* Dispositivos pequeños (tables en modo portrait(orientacion vertical) y landscape(horizontal) y celulares grandes, 600px a mas) */
+/* min-width ancho minimo
+si esque mi patalla mide al menos 600px , entonces lo que tengo dentro del media query se ejecuta */
 /* @media only screen and (min-width: 600px) {
   ...
 } */
-
+/* ---------------------------------------------------------------------------- */
 /* Dispositivos medianos (tables en orientacion landscape, 768px and up) */
+/* si la pantalla del dispositivo tiene un ancho minimo de 768px(para arriba), entonces aplico los cambios dentro del media query */
 /* @media only screen and (min-width: 768px) {
   ...
 } */
-
+/* ---------------------------------------------------------------------------- */
 /* Dispositivos grandes (laptops/computadoras de escritorio, 992px para arriba) */
 /* @media only screen and (min-width: 992px) {
   ...
 } */
-
+/* ---------------------------------------------------------------------------- */
 /* Pantallas muy grandes (laptos grandes and y computadoras de escritorio, 1200px hacia arriba) */
 /* @media only screen and (min-width: 1200px) {
   ...
 } */
+/* ---------------------------------------------------------------------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* .roboto-regular {
   font-family: "Roboto", sans-serif;
@@ -154,7 +158,7 @@ footer {
     display:none;
     /* display none -> no ocupa ningun espacio, entonces nunca se muestra en patalla */
 
-    
+
     /* visibility: hidden; */
     /* visibilidad es no es visible , pero si ocupa espacio */
   }
