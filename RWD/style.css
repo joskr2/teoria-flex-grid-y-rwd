@@ -49,47 +49,26 @@ si esque mi patalla mide al menos 600px , entonces lo que tengo dentro del media
 
 body {
   background: black;
+  font-size: 16px;
   color: white;
   min-height: 100dvh;
   display: grid;
-
   font-family: "Roboto",
     sans-serif;
-  /* font family es el tipo de letra(la fammilia) */
-
   font-optical-sizing: auto;
   font-weight: 400;
-  /* font weight es el grosor de la letra */
-
-  /* font style es estilo de la letra como cursiva por ejemplo */
   font-style: italic;
   font-variation-settings:
     "wdth" 100;
-
-  /* grid-template-columns: auto 1fr 1fr 1fr; */
-  /* grid-template-columns: auto repeat(3, 1fr);
-  grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr; */
-  /* grid-template-rows: auto repeat(5,1fr); */
-  /* grid-template-areas:
-    "header header header header"
-    "aside main main main"
-    "aside main main main"
-    "aside main main main"
-    "aside main main main"
-    "footer footer footer footer"
-  ; */
-
   grid-template-columns: 1fr;
-  grid-template-rows: auto 2fr 1fr auto;
-
-
+  grid-template-rows: auto 1fr 2fr auto;
+  gap: 24px;
   grid-template-areas:
     "header"
-    "main"
     "aside"
+    "main"
     "footer"
   ;
-  /* place-content: center; */
 }
 
 header {
@@ -99,6 +78,7 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
+  gap: 12px;
   padding: 12px;
 }
 
@@ -110,14 +90,13 @@ ul {
   /* main axis -> (eje principal)  */
   align-items: center;
   /* para centrar elementos en el eje secundario usare align items */
-  gap: 6px;
+  gap: 16px;
   display: none;
 }
 
 a {
   text-decoration: none;
   color: white;
-  font-size: x-small;
   text-transform: uppercase;
 }
 
@@ -193,7 +172,7 @@ footer {
   display: flex;
   gap: 24px;
   flex-direction: row;
-  max-width: 650px;
+  max-width: fit-content;
   /* es el ancho maximo del elemento */
 
 
@@ -208,11 +187,13 @@ footer {
   display: block;
 }
 
+/* pantallas medianas para adelante desde 768pixeles hacia arriba  */
 @media only screen and (min-width: 768px) {
 
   body {
-    grid-template-columns: auto 1fr 1fr 1fr;
-    grid-template-columns: auto repeat(3, 1fr);
+    font-size: 21px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto repeat(3, 1fr);
     grid-template-areas:
       "header header header header"
       "aside main main main"
@@ -223,9 +204,9 @@ footer {
     ;
   }
 
-
   ul {
     display: flex;
+    gap: 24px;
   }
 
   #menu-responsivo {
@@ -236,4 +217,20 @@ footer {
     /* visibility: hidden; */
     /* visibilidad es no es visible , pero si ocupa espacio */
   }
+}
+
+
+/* pantallas grandes */
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 32px;
+		}
+
+    ul {
+      display: flex;
+      gap: 32px;
+      color: aliceblue;
+    }
+
+
 }
