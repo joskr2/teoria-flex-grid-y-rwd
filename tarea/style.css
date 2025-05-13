@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body {
+  background: black;
+  font-size: 16px;
+  color: white;
+  min-height: 100dvh;
+  display: grid;
+  font-family: "Roboto",
+    sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-variation-settings:
+    "wdth" 100;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto repeat(6,1fr) auto;
+  grid-template-areas:
+    "header"
+    "converting-section"
+    "feature-section"
+    "why-choose-us-section"
+    "review-section"
+    "faq-section"
+    "cta-heading-section"
+    "footer"
+  ;
+}
