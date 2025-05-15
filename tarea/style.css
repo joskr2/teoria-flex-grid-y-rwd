@@ -35,25 +35,26 @@ body {
 
 header {
   display: flex;
-  /* justify-content: space-around; */
+  justify-content: space-between;
   border: 1px solid black;
   padding: 12px;
   align-items: center;
 }
 
-header > img {
-  flex: 1;
+header>img {
+  /* flex: 1; */
   max-width: fit-content;
-	}
+}
 
-header > nav {
-  display: flex;
-  flex: 6;
+header>nav {
+  display: none;
+  /* display: flex; */
+  /* flex: 6; */
   align-items: center;
-} 
+}
 
-header > button {
-  flex:1;
+header>button {
+  /* flex:1; */
   max-width: fit-content;
 }
 
@@ -62,9 +63,9 @@ ul {
   gap: 12px;
 }
 
-ul > li {
+ul>li {
   list-style: none;
-	}
+}
 
 a {
   text-decoration: none;
@@ -78,4 +79,24 @@ button {
   background: black;
   border-radius: 20px;
   padding: 5px 15px;
+}
+
+.menu-container {
+  display: flex;
+  gap: 6px;
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+  header>nav {
+    display: flex;
+  }
+
+  .menu-container>img {
+    display: none;
+  }
+
+
+
 }
