@@ -8,7 +8,6 @@
 }
 
 body {
-  background: black;
   font-size: 16px;
   color: white;
   min-height: 100dvh;
@@ -21,7 +20,7 @@ body {
   font-variation-settings:
     "wdth" 100;
   grid-template-columns: 1fr;
-  grid-template-rows: auto repeat(6,1fr) auto;
+  grid-template-rows: auto repeat(6, 1fr) auto;
   grid-template-areas:
     "header"
     "converting-section"
@@ -32,4 +31,51 @@ body {
     "cta-heading-section"
     "footer"
   ;
+}
+
+header {
+  display: flex;
+  /* justify-content: space-around; */
+  border: 1px solid black;
+  padding: 12px;
+  align-items: center;
+}
+
+header > img {
+  flex: 1;
+  max-width: fit-content;
+	}
+
+header > nav {
+  display: flex;
+  flex: 6;
+  align-items: center;
+} 
+
+header > button {
+  flex:1;
+  max-width: fit-content;
+}
+
+ul {
+  display: flex;
+  gap: 12px;
+}
+
+ul > li {
+  list-style: none;
+	}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+button {
+  border: none;
+  color: white;
+  background: black;
+  border-radius: 20px;
+  padding: 5px 15px;
 }
