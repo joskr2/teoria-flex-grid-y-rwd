@@ -89,6 +89,24 @@ button {
   gap: 24px;
 }
 
+#partners-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 6px;
+  margin: 10px;
+  justify-content: center;
+  max-height: fit-content;
+  max-width: 95%;
+  /* border: 1px solid black; */
+}
+
+#partners-sections>p {
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .converting-section-buttons-container {
   display: flex;
 }
@@ -159,12 +177,12 @@ button {
 }
 
 .hero-placeholder {
-  display: block;
+  /* display: block;
     width: 100vw;
     max-width: 100vw;
     height: auto;
     margin-left: calc(-50vw + 50%);
-    max-height: 15%;
+    max-height: 15%; */
 }
 
 
