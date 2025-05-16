@@ -113,7 +113,8 @@ button {
   justify-content: space-around;
 }
 
-#feature-section {
+#feature-section,
+#why-choose-us-section {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -121,14 +122,15 @@ button {
   margin-right: 10px;
 }
 
-#feature-section-container-title {
+#feature-section-container-title,
+#why-choose-us-section-title-container {
   display: flex;
   flex-direction: column;
   gap: 6px;
   text-align: center;
   width: fit-content;
   height: fit-content;
-  margin: auto;
+  margin: 10px auto;
 }
 
 .features-section-cards-container-card {
@@ -160,11 +162,54 @@ button {
   }
 }
 
+
+
+
 .min-container {
   /* max-width: 50%; */
   display: flex;
   flex: 1;
   flex-direction: column;
+
+  div {
+    h4 {
+      font-size: small;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+}
+
+.why-choose-us-section-cards-container {
+  display: flex;
+  gap: 24px;
+  flex-direction: row;
+  max-width:90vw;
+  overflow-x: auto;
+}
+
+.why-choose-us-section-cards-container--card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin: 12px;
+  /* border: 1px solid black; */
+
+  img {
+    max-width: 24px;
+  }
+
+  h5 {
+    font-size: small;
+  }
+
+  p {
+    font-size: small;
+  }
 }
 
 .img-white-placeholder {
