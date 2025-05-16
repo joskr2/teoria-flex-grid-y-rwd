@@ -20,10 +20,11 @@ body {
   font-variation-settings:
     "wdth" 100;
   grid-template-columns: 1fr;
-  grid-template-rows: auto repeat(6, 1fr) auto;
+  grid-template-rows: auto repeat(7, auto) auto;
   grid-template-areas:
     "header"
     "converting-section"
+    "partners-sections"
     "feature-section"
     "why-choose-us-section"
     "review-section"
@@ -105,6 +106,88 @@ button {
   align-items: center;
   text-transform: uppercase;
   text-align: center;
+}
+
+#partners-sections>div {
+  display: flex;
+  justify-content: space-around;
+}
+
+#feature-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#feature-section-container-title {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.features-section-cards-container-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  margin-left: 10px;
+  margin-right: 10px;
+  gap: 24px;
+  background: #f0f0f0;
+  border-radius: 10px;
+
+}
+
+#features-section-cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+
+
+.features-section-cards-container-card {
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+.min-container {
+  /* max-width: 50%; */
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.img-white-placeholder {
+  max-width: 100px;
+  width: 90px;
+  border-radius: 10px;
+  margin: auto;
+  /* border: 1px solid black; */
+}
+
+.min-img {
+  max-width: 120px;
+  max-height: 80px;
+}
+
+.features-section-cards-container-card>div>h4 {
+  color: #6f6f6f;
+}
+
+.features-section-cards-container-card>div>p {
+  justify-content: left;
+  color: #bebdbd;
+  font-size: x-small;
 }
 
 .converting-section-buttons-container {
