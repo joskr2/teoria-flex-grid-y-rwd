@@ -123,7 +123,9 @@ button {
 }
 
 #feature-section-container-title,
-#why-choose-us-section-title-container {
+#why-choose-us-section-title-container,
+#review-section-title-container
+ {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -133,16 +135,17 @@ button {
   margin: 10px auto;
 }
 
-.features-section-cards-container-card {
+.features-section-cards-container-card,
+.review-section-carousel--card {
   display: flex;
   justify-content: space-between;
   padding: 6px;
   margin-left: 10px;
   margin-right: 10px;
   gap: 24px;
-  background: #f0f0f0;
+  background: #f6f2f2;
   border-radius: 10px;
-
+  /* border:  1px solid black; */
 }
 
 #features-section-cards-container {
@@ -162,7 +165,18 @@ button {
   }
 }
 
+.min-card-review{
+  flex-direction: column;
+  text-align: left;
+  width: fit-content;
+  min-width: 60%;
+  padding: 6px;
+}
 
+.review-section-carousel--card-sub-content {
+  display: flex;
+  gap:6px
+}
 
 
 .min-container {
@@ -183,11 +197,11 @@ button {
 
 }
 
-.why-choose-us-section-cards-container {
+.why-choose-us-section-cards-container, #review-section-carousel{
   display: flex;
   gap: 24px;
   flex-direction: row;
-  max-width:90vw;
+  max-width: 90vw;
   overflow-x: auto;
 }
 
