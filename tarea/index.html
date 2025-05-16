@@ -1,289 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Landing Page de alta conversion</title>
+  <title>Landing Page de Alta Conversión</title>
 </head>
 
 <body>
-  <header>
-    <img src="/assets/logo.svg" alt="logo" width="24px">
-    <nav>
-      <ul>
-        <li>
-          <a href="">Item 1</a>
-        </li>
-        <li>
-          <a href="">Item 2</a>
-        </li>
-        <li>
-          <a href="">Item 3</a>
-        </li>
-        <li>
-          <a href="">Item 4</a>
-        </li>
-        <li>
-          <a href="">Item 5</a>
-        </li>
+  <header class="encabezado">
+    <img src="/assets/logo.svg" alt="Logo de la App" class="encabezado__logo">
+    <nav class="encabezado__nav">
+      <ul class="encabezado__lista">
+        <li class="encabezado__item"><a href="#" class="encabezado__enlace">Features</a></li>
+        <li class="encabezado__item"><a href="#" class="encabezado__enlace">How It Works</a></li>
+        <li class="encabezado__item"><a href="#" class="encabezado__enlace">Why Choose Us</a></li>
+        <li class="encabezado__item"><a href="#" class="encabezado__enlace">Reviews</a></li>
+        <li class="encabezado__item"><a href="#" class="encabezado__enlace">FAQs</a></li>
       </ul>
     </nav>
-    <div class="menu-container">
-      <button type="button">CTA desc</button>
-      <img src="/assets/menu-light.svg" alt="logo">
+    <div class="encabezado__acciones">
+      <button type="button" class="boton boton--cta-header">CTA Title</button>
+      <img src="/assets/menu-light.svg" alt="Menú" class="encabezado__menu-icono">
     </div>
-
   </header>
-  <section id="converting-section">
-    <div id="hero">
-      <div id="toggle-menu">
-        <div class="toggle-menu-container">
-          <span>Logros</span>
-          <div class="toggle-menu-container-subcontainer">
-            <p>Rated No1 App os 2025</p>
-            <img src="/assets/flecha-derecha.svg" alt="flecha">
-          </div>
-        </div>
-      </div>
-      <div class="toggle-menu-container-subcontainer-content">
-        <h1>
-          High Converting Heading Comes Here
-        </h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem deserunt dignissimos modi nemo? Quia veritatis nemo tempora porro autem delectus! Nostrum quas corrupti earum neque esse ratione accusamus error pariatur!</p>
-      </div>
-      <div class="converting-section-buttons-container">
-        <button type="button">
-          <img src="/assets/apple-logo.svg" alt="">
-          <p>Download App</p>
-        </button>
-        <button type="button">
-          <img src="/assets/play-store-logo.svg" alt="">
-          <p>Download App</p>
-        </button>
-      </div>
-    </div>
-    <img class="hero-placeholder" src="/assets/placeholder.svg" alt="" srcset="">
-  </section>
-  <section id="partners-sections">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quas eaque magnam corrupti </p>
-    <div>
-      <img src="flecha-abajo.svg" alt="flecha abajo">
-      <img src="flecha-derecha.svg" alt="flecha derecha">
-      <img src="flecha-next.svg" alt="flecha next">
-      <img src="waves.svg" alt="flecha waves">
-    </div>
-  </section>
-  <section id="feature-section">
-    <div id="feature-section-container-title">
-      <h3>Feature Section</h3>
-      <p>Lorem, ipsum dolor sit amet consectetur</p>
-    </div>
 
-    <div id="features-section-cards-container">
-      <div class="features-section-cards-container-card">
-        <div id="features-section-cards-content">
-          <h4>Highlighted Feature 1</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis asperiores debitis dicta repellendus praesentium, </p>
+  <main class="principal">
+    <section class="hero">
+      <div class="hero__contenido">
+        <div class="hero__logro">
+          <span class="hero__logro-etiqueta">Achievement</span>
+          <p class="hero__logro-texto">Rated No.1 App of 2025 <img src="/assets/flecha-derecha.svg" alt="icono flecha" class="hero__logro-icono"></p>
         </div>
-        <img  class="img-white-placeholder " src="/assets/white-placeholder.svg" alt="white placeholder">
-      </div>
-      <div class="features-section-cards-container-card min-container ">
-        <div id="features-section-cards-content">
-          <h4>Highlighted Feature 2</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis asperiores debitis dicta repellendus praesentium, </p>
+        <h1 class="hero__titulo">High Converting Heading Comes Here</h1>
+        <p class="hero__descripcion">Use a clear headline, value prop, and app store buttons — give them a reason to scroll or download right away.</p>
+        <div class="hero__botones">
+          <button type="button" class="boton boton--principal">
+            <img src="/assets/apple-logo.svg" alt="Apple Store" class="boton__icono">
+            Download App
+          </button>
+          <button type="button" class="boton boton--principal">
+            <img src="/assets/play-store-logo.svg" alt="Google Play Store" class="boton__icono">
+            Download App
+          </button>
         </div>
-        <img class="img-white-placeholder min-img" src="/assets/white-placeholder-2.svg" alt="white placeholder">
+        <p class="hero__descargas">200K+ Downloads</p>
       </div>
-      <div class="features-section-cards-container-card min-container ">
-        <div id="features-section-cards-content">
-          <h4>Highlighted Feature 3</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis asperiores debitis dicta repellendus praesentium, </p>
-        </div>
-        <img class="img-white-placeholder min-img" src="/assets/white-placeholder-2.svg" alt="white placeholder">
+      <div class="hero__imagen-contenedor">
+        <img src="/assets/placeholder.svg" alt="Vista previa de la app" class="hero__imagen">
       </div>
-    </div>
-  </section>
-  <section id="why-choose-us-section">
-    <div id="why-choose-us-section-title-container">
-      <h3>Why choose Us Section</h3>
-      <p>descripcion</p>
-    </div>
+    </section>
 
-      <div class="why-choose-us-section-cards-container">
-        <div class="why-choose-us-section-cards-container--card">
-          <img src="question.svg" alt="icono">
-          <h5>Mini titulo</h5>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="why-choose-us-section-cards-container--card">
-          <img src="question.svg" alt="icono">
-          <h5>Mini titulo</h5>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="why-choose-us-section-cards-container--card">
-          <img src="question.svg" alt="icono">
-          <h5>Mini titulo</h5>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="why-choose-us-section-cards-container--card">
-          <img src="question.svg" alt="icono">
-          <h5>Mini titulo</h5>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="why-choose-us-section-cards-container--card">
-          <img src="question.svg" alt="icono">
-          <h5>Mini titulo</h5>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="why-choose-us-section-cards-container--card">
-          <img src="question.svg" alt="icono">
-          <h5>Mini titulo</h5>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="why-choose-us-section-cards-container--card">
-          <img src="question.svg" alt="icono">
-          <h5>Mini titulo</h5>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        </div>
+    <section class="socios">
+      <p class="socios__texto">WE ARE PARTNERED WITH MORE THAN 50+ COMPANIES AROUND THE GLOBE.</p>
+      <div class="socios__logos">
+        <img src="/assets/apple-logo.svg" alt="Logo Socio UM" class="socios__logo-item">
+        <img src="/assets/apple-logo.svg" alt="Logo Socio LogoIpsum" class="socios__logo-item">
+        <img src="/assets/apple-logo.svg" alt="Logo Socio OOO" class="socios__logo-item">
+        <img src="/assets/apple-logo.svg" alt="Logo Socio Orb" class="socios__logo-item">
+        <img src="/assets/apple-logo.svg" alt="Logo Socio Li" class="socios__logo-item">
       </div>
+    </section>
 
-  </section>
-  <section id="review-section">
-    <div id="review-section-title-container">
-      <h3>Review Section</h3>
-      <p>descripcion</p>
-    </div>
-    <div id="review-section-carousel">
-      <div class="review-section-carousel--card min-card-review">
-        <div>
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
+    <section class="caracteristicas">
+      <div class="caracteristicas__encabezado">
+        <h2 class="caracteristicas__titulo-seccion">Features Section</h2>
+        <p class="caracteristicas__descripcion-seccion">Highlight what sets your app apart from others. Use main feature cards with supporting visuals and copy to quickly show how your app solves real problems.</p>
+      </div>
+      <div class="caracteristicas__contenedor-tarjetas">
+        <div class="caracteristicas__tarjeta caracteristicas__tarjeta--principal">
+          <div class="caracteristicas__tarjeta-contenido">
+            <h3 class="caracteristicas__tarjeta-titulo">Highlighted Feature 1</h3>
+            <p class="caracteristicas__tarjeta-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis asperiores debitis dicta repellendus praesentium.</p>
+          </div>
+          <img src="/assets/white-placeholder.svg" alt="Visual de Característica 1" class="caracteristicas__tarjeta-imagen">
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quibusdam esse  velit iure. Voluptatem magni sed at.</p>
-        <hr>
-        <div class="review-section-carousel--card-sub-content">
-          <img src="/assets/avatar.svg" alt="img circular">
-          <div>
-            <h5>Nombre</h5>
-            <h6>descrip</h6>
+        <div class="caracteristicas__columna-secundaria">
+          <div class="caracteristicas__tarjeta caracteristicas__tarjeta--secundaria">
+            <div class="caracteristicas__tarjeta-contenido">
+              <h3 class="caracteristicas__tarjeta-titulo">Highlighted Feature 2</h3>
+              <p class="caracteristicas__tarjeta-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis asperiores.</p>
+            </div>
+            <img src="/assets/white-placeholder-2.svg" alt="Visual de Característica 2" class="caracteristicas__tarjeta-imagen caracteristicas__tarjeta-imagen--secundaria">
+          </div>
+          <div class="caracteristicas__tarjeta caracteristicas__tarjeta--secundaria">
+            <div class="caracteristicas__tarjeta-contenido">
+              <h3 class="caracteristicas__tarjeta-titulo">Highlighted Feature 3</h3>
+              <p class="caracteristicas__tarjeta-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis asperiores.</p>
+            </div>
+            <img src="/assets/white-placeholder-2.svg" alt="Visual de Característica 3" class="caracteristicas__tarjeta-imagen caracteristicas__tarjeta-imagen--secundaria">
           </div>
         </div>
       </div>
-      <div class="review-section-carousel--card min-card-review">
-        <div>
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
+    </section>
+
+    <section class="por-que-elegirnos">
+      <div class="por-que-elegirnos__encabezado">
+        <h2 class="por-que-elegirnos__titulo-seccion">Why Choose Us Section</h2>
+        <p class="por-que-elegirnos__descripcion-seccion">Make your strengths obvious. Use icons, brief titles, and benefit-led text to explain why users should pick your app over others.</p>
+      </div>
+      <div class="por-que-elegirnos__contenedor-items">
+        <div class="por-que-elegirnos__item">
+          <img src="/assets/apple-logo.svg" alt="Icono Beneficio" class="por-que-elegirnos__item-icono">
+          <h3 class="por-que-elegirnos__item-titulo">Title</h3>
+          <p class="por-que-elegirnos__item-descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quibusdam esse velit iure. Voluptatem magni sed at.</p>
-        <hr>
-        <div class="review-section-carousel--card-sub-content">
-          <img src="/assets/avatar.svg" alt="img circular">
-          <div>
-            <h5>Nombre</h5>
-            <h6>descrip</h6>
+        <div class="por-que-elegirnos__item">
+          <img src="/assets/question.svg" alt="Icono Beneficio" class="por-que-elegirnos__item-icono">
+          <h3 class="por-que-elegirnos__item-titulo">Title</h3>
+          <p class="por-que-elegirnos__item-descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="por-que-elegirnos__item">
+          <img src="/assets/question.svg" alt="Icono Beneficio" class="por-que-elegirnos__item-icono">
+          <h3 class="por-que-elegirnos__item-titulo">Title</h3>
+          <p class="por-que-elegirnos__item-descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="por-que-elegirnos__item">
+          <img src="/assets/question.svg" alt="Icono Beneficio" class="por-que-elegirnos__item-icono">
+          <h3 class="por-que-elegirnos__item-titulo">Title</h3>
+          <p class="por-que-elegirnos__item-descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reseñas">
+      <div class="reseñas__encabezado">
+        <h2 class="reseñas__titulo-seccion">Review Section</h2>
+        <p class="reseñas__descripcion-seccion">Let happy users convince the rest. Testimonials with names, ratings, and short blurbs help build authenticity and trust.</p>
+      </div>
+      <div class="reseñas__contenedor-tarjetas">
+        <div class="reseñas__tarjeta">
+          <div class="reseñas__tarjeta-estrellas">
+            <img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella">
+          </div>
+          <p class="reseñas__tarjeta-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quibusdam esse velit iure. Voluptatem magni sed at.</p>
+          <hr class="reseñas__tarjeta-divisor">
+          <div class="reseñas__tarjeta-usuario">
+            <img src="/assets/avatar.svg" alt="Avatar de usuario" class="reseñas__usuario-avatar">
+            <div class="reseñas__usuario-info">
+              <h5 class="reseñas__usuario-nombre">Name</h5>
+              <p class="reseñas__usuario-pais">Country</p>
+            </div>
+          </div>
+        </div>
+        <div class="reseñas__tarjeta">
+          <div class="reseñas__tarjeta-estrellas">
+            <img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella">
+          </div>
+          <p class="reseñas__tarjeta-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quibusdam esse velit iure. Voluptatem magni sed at.</p>
+          <hr class="reseñas__tarjeta-divisor">
+          <div class="reseñas__tarjeta-usuario">
+            <img src="/assets/avatar.svg" alt="Avatar de usuario" class="reseñas__usuario-avatar">
+            <div class="reseñas__usuario-info">
+              <h5 class="reseñas__usuario-nombre">Name</h5>
+              <p class="reseñas__usuario-pais">Country</p>
+            </div>
+          </div>
+        </div>
+        <div class="reseñas__tarjeta">
+          <div class="reseñas__tarjeta-estrellas">
+            <img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella">
+          </div>
+          <p class="reseñas__tarjeta-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quibusdam esse velit iure. Voluptatem magni sed at.</p>
+          <hr class="reseñas__tarjeta-divisor">
+          <div class="reseñas__tarjeta-usuario">
+            <img src="/assets/avatar.svg" alt="Avatar de usuario" class="reseñas__usuario-avatar">
+            <div class="reseñas__usuario-info">
+              <h5 class="reseñas__usuario-nombre">Name</h5>
+              <p class="reseñas__usuario-pais">Country</p>
+            </div>
+          </div>
+        </div>
+        <div class="reseñas__tarjeta">
+          <div class="reseñas__tarjeta-estrellas">
+            <img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella"><img src="/assets/star.svg" alt="Estrella">
+          </div>
+          <p class="reseñas__tarjeta-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quibusdam esse velit iure. Voluptatem magni sed at.</p>
+          <hr class="reseñas__tarjeta-divisor">
+          <div class="reseñas__tarjeta-usuario">
+            <img src="/assets/avatar.svg" alt="Avatar de usuario" class="reseñas__usuario-avatar">
+            <div class="reseñas__usuario-info">
+              <h5 class="reseñas__usuario-nombre">Name</h5>
+              <p class="reseñas__usuario-pais">Country</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="review-section-carousel--card min-card-review">
-        <div>
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quibusdam esse velit iure. Voluptatem magni sed at.</p>
-        <hr>
-        <div class="review-section-carousel--card-sub-content">
-          <img src="/assets/avatar.svg" alt="img circular">
-          <div>
-            <h5>Nombre</h5>
-            <h6>descrip</h6>
-          </div>
-        </div>
+    </section>
+
+    <section class="faq">
+      <div class="faq__encabezado">
+        <h2 class="faq__titulo-seccion">FAQ Section</h2>
+        <p class="faq__descripcion-seccion">Reduce hesitation with smart answers. Use collapsible questions to address common concerns without overwhelming the layout.</p>
       </div>
-      <div class="review-section-carousel--card min-card-review">
-        <div>
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
-          <img src="/assets/star.svg" alt="start">
+      <div class="faq__contenedor-preguntas">
+        <div class="faq__pregunta-item">
+          <img src="/assets/plus.svg" alt="Icono expandir" class="faq__pregunta-icono">
+          <p class="faq__pregunta-texto">Question 1</p>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quibusdam esse velit iure. Voluptatem magni sed at.</p>
-        <hr>
-        <div class="review-section-carousel--card-sub-content">
-          <img src="/assets/avatar.svg" alt="img circular">
-          <div>
-            <h5>Nombre</h5>
-            <h6>descrip</h6>
-          </div>
+        <div class="faq__pregunta-item">
+          <img src="/assets/plus.svg" alt="Icono expandir" class="faq__pregunta-icono">
+          <p class="faq__pregunta-texto">Question 2</p>
+        </div>
+        <div class="faq__pregunta-item">
+          <img src="/assets/plus.svg" alt="Icono expandir" class="faq__pregunta-icono">
+          <p class="faq__pregunta-texto">Question 3</p>
+        </div>
+        <div class="faq__pregunta-item">
+          <img src="/assets/plus.svg" alt="Icono expandir" class="faq__pregunta-icono">
+          <p class="faq__pregunta-texto">Question 4</p>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="faq-section">
-    <div id="faq-section-left">
-      <p>
-        texto generico
-      </p>
-    </div>
-    <div id="faq-section-right">
-      <div class="faq-section-right-card">
-        <img src="" alt="icon suma">
-        <p>Question 1</p>
+    </section>
+
+    <section class="cta-final">
+      <div class="cta-final__contenido">
+        <h2 class="cta-final__titulo">CTA Heading</h2>
+        <p class="cta-final__descripcion">Reinforce the download offer, repeat your app's value, and include the app buttons again for one final push.</p>
+        <div class="cta-final__botones">
+          <button type="button" class="boton boton--secundario">
+            <img src="/assets/apple-logo.svg" alt="Apple Store" class="boton__icono">
+            Download App
+          </button>
+          <button type="button" class="boton boton--secundario">
+            <img src="/assets/play-store-logo.svg" alt="Google Play Store" class="boton__icono">
+            Download App
+          </button>
+        </div>
       </div>
-      <div class="faq-section-right-card">
-        <img src="" alt="icon suma">
-        <p>Question 1</p>
+      <div class="cta-final__imagen-contenedor">
+        <img src="/assets/placeholder-cta.svg" alt="Visual CTA Final" class="cta-final__imagen">
       </div>
-      <div class="faq-section-right-card">
-        <img src="" alt="icon suma">
-        <p>Question 1</p>
-      </div>
-      <div class="faq-section-right-card">
-        <img src="" alt="icon suma">
-        <p>Question 1</p>
-      </div>
-    </div>
-  </section>
-  <section id="cta-heading-section">
-    <div class="cta-heading-section-first">
-      <h4>CTA Heading</h4>
-      <p>descripcion</p>
-      <div>
-        <button>
-          <img src="" alt="imagen peq">
-          <p>download</p>
-        </button>
-        <button>
-          <img src="" alt="imagen peq2">
-          <p>download</p>
-        </button>
-      </div>
-    </div>
-    <div class="cta-heading-section-second">
-      <img src="" alt="imagen1">
-    </div>
-    <div class="cta-heading-section-thrid">
-      <img src="" alt="imagen2">
-    </div>
-  </section>
-  <footer>
-    <div> todos los derechos reservados</div>
-    <div>
-      <a href="LinK">Linkedln</a>
-      <a href="LinK">Insta</a>
-      <a href="LinK">Facebook</a>
-      <a href="LinK">X</a>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <p class="pie-pagina__copyright">© 2025 Company Name. All Rights Reserved.</p>
+    <div class="pie-pagina__redes">
+      <a href="#" class="pie-pagina__enlace-red">LinkedIn</a>
+      <a href="#" class="pie-pagina__enlace-red">Instagram</a>
+      <a href="#" class="pie-pagina__enlace-red">Facebook</a>
+      <a href="#" class="pie-pagina__enlace-red">Twitter</a>
     </div>
   </footer>
 </body>

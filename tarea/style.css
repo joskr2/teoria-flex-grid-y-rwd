@@ -1,343 +1,725 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* ----- RESET BÁSICO Y CONFIGURACIÓN GLOBAL ----- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 100%;
+}
+
+html {
+  font-size: 100%;
+  /* Para que 1rem = 16px por defecto */
 }
 
 body {
-  font-size: 16px;
-  color: black;
-  min-height: 100dvh;
-  display: grid;
-  font-family: "Roboto",
-    sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-
-  font-variation-settings:
-    "wdth" 100;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto repeat(7, auto) auto;
-  grid-template-areas:
-    "header"
-    "converting-section"
-    "partners-sections"
-    "feature-section"
-    "why-choose-us-section"
-    "review-section"
-    "faq-section"
-    "cta-heading-section"
-    "footer"
-  ;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  /* Un color de texto base más legible */
+  line-height: 1.6;
+  background-color: #fff;
+  display: flex;
+  /* Para el sticky footer si es necesario o layout general */
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-header {
+.principal {
+  flex-grow: 1;
+  /* Permite que el main ocupe el espacio disponible */
+}
+
+/* Contenedor general para centrar contenido y limitar ancho */
+.encabezado,
+.principal>section,
+/* Aplicar a secciones directas de main */
+.pie-pagina {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1200px;
+  /* Ancho máximo del contenido */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----- BOTONES ----- */
+.boton {
+  display: inline-flex;
+  /* inline-flex para alinear icono y texto */
+  align-items: center;
+  gap: 0.5rem;
+  /* Espacio entre icono y texto */
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 2rem;
+  /* Bordes redondeados para botones tipo "pill" */
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton--cta-header {
+  background-color: #333;
+  color: #fff;
+}
+
+.boton--cta-header:hover {
+  background-color: #555;
+}
+
+
+.boton--principal {
+  background-color: #000;
+  color: #fff;
+}
+
+.boton--principal:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.boton--secundario {
+  background-color: #eee;
+  /* Un color más suave para CTA secundario */
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.boton--secundario:hover {
+  background-color: #ddd;
+}
+
+.boton__icono {
+  height: 1em;
+  /* Altura relativa al texto del botón */
+  width: auto;
+}
+
+
+/* ----- ENCABEZADO ----- */
+.encabezado {
   display: flex;
   justify-content: space-between;
-  padding: 12px;
   align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  /* Separador sutil */
 }
 
-header>img {
-  /* flex: 1; */
-  max-width: fit-content;
+.encabezado__logo {
+  height: 2rem;
+  /* Ajustar según el tamaño del logo */
+  width: auto;
 }
 
-header>nav {
+.encabezado__nav {
   display: none;
-  /* display: flex; */
-  /* flex: 6; */
-  align-items: center;
+  /* Oculto en móvil por defecto */
 }
 
-header>button {
-  /* flex:1; */
-  max-width: fit-content;
-}
-
-ul {
+.encabezado__lista {
   display: flex;
-  gap: 12px;
-}
-
-ul>li {
   list-style: none;
+  gap: 1.5rem;
+  /* Espacio entre elementos de navegación */
 }
 
-a {
+.encabezado__enlace {
   text-decoration: none;
-  color: black;
+  color: #555;
   font-weight: 500;
 }
 
-button {
-  display: flex;
-  margin: 6px;
-  gap: 4px;
-  border: none;
-  color: white;
-  background: black;
-  border-radius: 20px;
-  padding: 5px 15px;
+.encabezado__enlace:hover {
+  color: #000;
 }
 
-#converting-section {
+.encabezado__acciones {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-#partners-sections {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 6px;
-  margin: 10px;
-  justify-content: center;
-  max-height: fit-content;
-  max-width: 95%;
-  /* border: 1px solid black; */
-}
-
-#partners-sections>p {
   align-items: center;
-  text-transform: uppercase;
+  gap: 1rem;
+}
+
+.encabezado__menu-icono {
+  display: block;
+  /* Visible en móvil */
+  cursor: pointer;
+  width: 1.5rem;
+  height: auto;
+}
+
+/* ----- SECCIONES GENÉRICAS ----- */
+.principal>section {
+  /* Espaciado vertical entre secciones */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Títulos de sección */
+.caracteristicas__titulo-seccion,
+.por-que-elegirnos__titulo-seccion,
+.reseñas__titulo-seccion,
+.faq__titulo-seccion,
+.cta-final__titulo {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+/* Descripciones de sección */
+.caracteristicas__descripcion-seccion,
+.por-que-elegirnos__descripcion-seccion,
+.reseñas__descripcion-seccion,
+.faq__descripcion-seccion,
+.cta-final__descripcion {
+  text-align: center;
+  max-width: 600px;
+  /* Limitar ancho de descripciones */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  color: #666;
+}
+
+/* ----- HERO SECTION ----- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
   text-align: center;
 }
 
-#partners-sections>div {
-  display: flex;
-  justify-content: space-around;
+.hero__contenido {
+  max-width: 600px;
+  /* Limitar ancho del texto del hero */
 }
 
-#feature-section,
-#why-choose-us-section {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-left: 10px;
-  margin-right: 10px;
+.hero__logro {
+  background-color: #f0f0f0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  display: inline-block;
+  /* Para que no ocupe todo el ancho */
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
 }
 
-#feature-section-container-title,
-#why-choose-us-section-title-container,
-#review-section-title-container
- {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  text-align: center;
-  width: fit-content;
-  height: fit-content;
-  margin: 10px auto;
+.hero__logro-etiqueta {
+  font-weight: bold;
+  margin-right: 0.5em;
 }
 
-.features-section-cards-container-card,
-.review-section-carousel--card {
-  display: flex;
-  justify-content: space-between;
-  padding: 6px;
-  margin-left: 10px;
-  margin-right: 10px;
-  gap: 24px;
-  background: #f6f2f2;
-  border-radius: 10px;
-  /* border:  1px solid black; */
+.hero__logro-texto {
+  display: inline;
+  /* Para que el icono quede al lado */
 }
 
-#features-section-cards-container {
+.hero__logro-icono {
+  width: 0.8em;
+  margin-left: 0.3em;
+  vertical-align: middle;
+}
+
+.hero__titulo {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero__descripcion {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.hero__botones {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
   flex-wrap: wrap;
-  gap: 12px;
+  /* Para que los botones se ajusten en pantallas pequeñas */
 }
 
-
-
-.features-section-cards-container-card {
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
+.hero__descargas {
+  font-size: 0.9rem;
+  color: #777;
 }
 
-.min-card-review{
-  flex-direction: column;
-  text-align: left;
-  width: fit-content;
-  min-width: 60%;
-  padding: 6px;
+.hero__imagen-contenedor {
+  width: 100%;
+  max-width: 500px;
+  /* Ajustar según el diseño */
 }
 
-.review-section-carousel--card-sub-content {
+.hero__imagen {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /* Bordes suaves para la imagen */
+}
+
+/* ----- SOCIOS SECTION ----- */
+.socios {
+  text-align: center;
+  background-color: #f9f9f9;
+  /* Fondo sutil */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.socios__texto {
+  margin-bottom: 1.5rem;
+  color: #777;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.socios__logos {
   display: flex;
-  gap:6px
-}
-
-
-.min-container {
-  /* max-width: 50%; */
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-
-  div {
-    h4 {
-      font-size: small;
-    }
-
-    p {
-      font-size: 12px;
-    }
-  }
-
-}
-
-.why-choose-us-section-cards-container, #review-section-carousel{
-  display: flex;
-  gap: 24px;
-  flex-direction: row;
-  max-width: 90vw;
-  overflow-x: auto;
-}
-
-.why-choose-us-section-cards-container--card {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  margin: 12px;
-  /* border: 1px solid black; */
-
-  img {
-    max-width: 24px;
-  }
-
-  h5 {
-    font-size: small;
-  }
-
-  p {
-    font-size: small;
-  }
-}
-
-.img-white-placeholder {
-  max-width: 100px;
-  width: 90px;
-  border-radius: 10px;
-  margin: auto;
-  /* border: 1px solid black; */
-}
-
-.min-img {
-  max-width: 120px;
-  max-height: 80px;
-}
-
-.features-section-cards-container-card>div>h4 {
-  color: #6f6f6f;
-}
-
-.features-section-cards-container-card>div>p {
-  justify-content: left;
-  color: #bebdbd;
-  font-size: x-small;
-}
-
-.converting-section-buttons-container {
-  display: flex;
-}
-
-#hero {
-  display: flex;
-  flex-direction: column;
-  max-width: 90%;
-  align-self: center;
-  gap: 24px;
-  align-items: center;
-  /* align-self: center; */
-  /* margin: 0 auto; */
-}
-
-.toggle-menu-container-subcontainer-content {
-  /* display: flex;
-  flex-direction: column;
-  max-width: 50%;
-  margin: auto; */
-  /* max-width: 50%; */
-}
-
-.menu-container {
-  display: flex;
-  gap: 6px;
-}
-
-#toggle-menu {
-  display: flex;
-  font-size: small;
-  border-radius: 10px;
-  height: fit-content;
+  flex-wrap: wrap;
+  /* Para que se ajusten en pantallas pequeñas */
   justify-content: center;
-  align-content: center;
-  background: #f4f3f3;
-  width: fit-content;
-  padding: 2px;
+  align-items: center;
+  gap: 2rem;
+  /* Espacio entre logos */
 }
 
-#toggle-menu>.toggle-menu-container {
+.socios__logo-item {
+  height: 2rem;
+  /* Ajustar según el tamaño de los logos */
+  width: auto;
+  opacity: 0.7;
+  /* Logos un poco atenuados */
+  transition: opacity 0.3s ease;
+}
+
+.socios__logo-item:hover {
+  opacity: 1;
+}
+
+/* ----- CARACTERÍSTICAS SECTION ----- */
+.caracteristicas__encabezado {
+  margin-bottom: 2rem;
+}
+
+.caracteristicas__contenedor-tarjetas {
   display: flex;
-  font-weight: 400;
-  gap: 6px;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-#toggle-menu>.toggle-menu-container>span {
-  background: white;
-  height: fit-content;
-  padding-right: 5px;
-  margin-left: 3px;
-  padding-left: 5px;
-  /* border-radius: 10px; */
-  border-start-start-radius: 10px;
-  border-start-end-radius: 10px;
-  border-end-end-radius: 10px;
-  border-end-start-radius: 10px;
-}
-
-.toggle-menu-container-subcontainer {
+.caracteristicas__tarjeta {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
   display: flex;
-  gap: 4px;
+  flex-direction: column;
+  /* Por defecto para móvil */
+  gap: 1rem;
 }
 
-.toggle-menu-container {
+.caracteristicas__tarjeta-contenido {
+  flex-grow: 1;
+}
+
+.caracteristicas__tarjeta-titulo {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.caracteristicas__tarjeta-descripcion {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.caracteristicas__tarjeta-imagen {
+  width: 100%;
+  max-width: 200px;
+  /* Limitar tamaño de imagen en tarjeta */
+  height: auto;
+  border-radius: 6px;
+  align-self: center;
+  /* Centrar imagen si la tarjeta es más ancha */
+}
+
+.caracteristicas__tarjeta-imagen--secundaria {
+  max-width: 150px;
+  /* Imágenes más pequeñas para tarjetas secundarias */
+}
+
+.caracteristicas__columna-secundaria {
   display: flex;
-  gap: 4px;
-}
-
-.hero-placeholder {
-  /* display: block;
-    width: 100vw;
-    max-width: 100vw;
-    height: auto;
-    margin-left: calc(-50vw + 50%);
-    max-height: 15%; */
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 
-@media only screen and (min-width: 1200px) {
+/* ----- POR QUÉ ELEGIRNOS SECTION ----- */
+.por-que-elegirnos__encabezado {
+  margin-bottom: 2rem;
+}
 
-  header>nav {
+.por-que-elegirnos__contenedor-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Layout responsivo */
+  gap: 1.5rem;
+}
+
+.por-que-elegirnos__item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.por-que-elegirnos__item-icono {
+  width: 2.5rem;
+  /* Tamaño del icono */
+  height: auto;
+  margin-bottom: 0.75rem;
+}
+
+.por-que-elegirnos__item-titulo {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: #444;
+}
+
+.por-que-elegirnos__item-descripcion {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* ----- RESEÑAS SECTION ----- */
+.reseñas__encabezado {
+  margin-bottom: 2rem;
+}
+
+.reseñas__contenedor-tarjetas {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  /* Para desplazamiento horizontal en móvil */
+  padding-bottom: 1rem;
+  /* Espacio para la barra de scroll */
+}
+
+.reseñas__tarjeta {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-width: 280px;
+  /* Ancho mínimo de cada tarjeta de reseña */
+  flex-shrink: 0;
+  /* Evita que las tarjetas se encojan */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.reseñas__tarjeta-estrellas {
+  margin-bottom: 0.75rem;
+}
+
+.reseñas__tarjeta-estrellas img {
+  width: 1rem;
+  height: auto;
+  margin-right: 0.2rem;
+}
+
+.reseñas__tarjeta-texto {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.reseñas__tarjeta-divisor {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 1rem 0;
+}
+
+.reseñas__tarjeta-usuario {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.reseñas__usuario-avatar {
+  width: 2.5rem;
+  /* Tamaño del avatar */
+  height: 2.5rem;
+  border-radius: 50%;
+  /* Avatar circular */
+}
+
+.reseñas__usuario-nombre {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.reseñas__usuario-pais {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+/* ----- FAQ SECTION ----- */
+.faq__encabezado {
+  margin-bottom: 2rem;
+}
+
+.faq__contenedor-preguntas {
+  max-width: 700px;
+  /* Limitar ancho del contenedor de FAQs */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq__pregunta-item {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  /* Sugiere interactividad (aunque no la haya sin JS) */
+}
+
+.faq__pregunta-item:hover {
+  background-color: #f0f0f0;
+}
+
+.faq__pregunta-icono {
+  width: 1rem;
+  height: auto;
+}
+
+.faq__pregunta-texto {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  flex-grow: 1;
+  /* Para que el texto ocupe el espacio */
+}
+
+/* ----- CTA FINAL SECTION ----- */
+.cta-final {
+  background-color: #333;
+  /* Fondo oscuro para el CTA final */
+  color: #fff;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.cta-final__titulo {
+  color: #fff;
+}
+
+.cta-final__descripcion {
+  color: #eee;
+  margin-bottom: 2rem;
+}
+
+.cta-final__botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  /* Espacio antes de la imagen si la hay debajo */
+}
+
+.cta-final .boton--secundario {
+  /* Estilo específico para botones en CTA final */
+  background-color: #fff;
+  color: #333;
+  border-color: #fff;
+}
+
+.cta-final .boton--secundario:hover {
+  background-color: #eee;
+}
+
+
+.cta-final__imagen-contenedor {
+  margin-top: 2rem;
+  /* Si la imagen va después del contenido */
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-final__imagen {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+/* ----- PIE DE PÁGINA ----- */
+.pie-pagina {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.pie-pagina__copyright {
+  margin-bottom: 0.5rem;
+}
+
+.pie-pagina__redes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pie-pagina__enlace-red {
+  text-decoration: none;
+  color: #777;
+}
+
+.pie-pagina__enlace-red:hover {
+  color: #333;
+}
+
+
+/* ----- MEDIA QUERIES (Responsividad) ----- */
+
+/* Tablet y Escritorio Pequeño */
+@media (min-width: 768px) {
+  .encabezado__nav {
     display: flex;
+    /* Mostrar navegación en escritorio */
   }
 
-  .menu-container>img {
+  .encabezado__menu-icono {
     display: none;
+    /* Ocultar icono de menú en escritorio */
+  }
+
+  .hero {
+    flex-direction: row;
+    /* Hero: texto a la izquierda, imagen a la derecha */
+    text-align: left;
+    /* Alinear texto a la izquierda en hero */
+    gap: 3rem;
+  }
+
+  .hero__contenido {
+    max-width: none;
+    /* Permitir que el contenido ocupe más espacio */
+    flex: 1;
+    /* Darle flexibilidad */
+  }
+
+  .hero__botones {
+    justify-content: flex-start;
+    /* Alinear botones a la izquierda */
+  }
+
+  .hero__imagen-contenedor {
+    flex: 1;
+    /* Darle flexibilidad a la imagen */
+    max-width: 45%;
+    /* Limitar ancho de la imagen en escritorio */
+  }
+
+  .caracteristicas__contenedor-tarjetas {
+    flex-direction: row;
+    /* Layout horizontal para características */
+    align-items: flex-start;
+    /* Alinear al inicio si tienen alturas diferentes */
+  }
+
+  .caracteristicas__tarjeta--principal {
+    flex: 1.5;
+    /* Tarjeta principal más ancha */
+  }
+
+  .caracteristicas__columna-secundaria {
+    flex: 1;
+  }
+
+  .caracteristicas__tarjeta {
+    flex-direction: column;
+    /* Dentro de cada tarjeta, contenido e imagen vertical */
+  }
+
+  .caracteristicas__tarjeta--principal .caracteristicas__tarjeta-imagen {
+    max-width: 100%;
+    /* Permitir que la imagen principal ocupe más */
+    align-self: initial;
   }
 
 
+  .reseñas__contenedor-tarjetas {
+    /* Podrías cambiar a Grid si no quieres scroll horizontal en escritorio */
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+  }
 
+  .faq {
+    /* Para layout de FAQ lado a lado si se desea */
+    /* display: flex;
+    gap: 2rem;
+    align-items: flex-start; */
+  }
+
+  .faq__encabezado {
+    /* flex: 1;
+    text-align: left; */
+  }
+
+  .faq__contenedor-preguntas {
+    /* flex: 1.5; */
+  }
+
+  .cta-final {
+    display: flex;
+    /* Para layout lado a lado en escritorio */
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+  }
+
+  .cta-final__contenido {
+    flex: 1;
+  }
+
+  .cta-final__botones {
+    justify-content: flex-start;
+  }
+
+  .cta-final__imagen-contenedor {
+    flex: 0 0 40%;
+    /* La imagen no crece, no se encoge, base 40% */
+    margin-top: 0;
+  }
+
+
+  .pie-pagina {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .pie-pagina__copyright {
+    margin-bottom: 0;
+  }
 }
