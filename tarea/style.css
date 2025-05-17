@@ -44,8 +44,8 @@ body {
 
 /* ----- BOTONES ----- */
 .boton {
-  display: inline-flex;
-  /* inline-flex para alinear icono y texto */
+  display: flex;
+  /*flex para alinear icono y texto */
   align-items: center;
   gap: 0.5rem;
   /* Espacio entre icono y texto */
@@ -191,12 +191,17 @@ body {
   align-items: center;
   gap: 2rem;
   text-align: center;
+
+  &__contenido {
+    max-width: 600px;
+    /* Limitar ancho del texto del hero */
+  }
 }
 
-.hero__contenido {
+/* .hero__contenido {
   max-width: 600px;
-  /* Limitar ancho del texto del hero */
-}
+
+} */
 
 .hero__logro {
   background-color: #f0f0f0;
